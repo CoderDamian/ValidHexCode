@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/HexCodeSolution/.vs/HexCodeSolution/v17
+/HexCodeSolution/.vs/HexCodeSolution/FileContentIndex
