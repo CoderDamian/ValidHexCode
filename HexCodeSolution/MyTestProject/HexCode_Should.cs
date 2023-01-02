@@ -18,7 +18,7 @@ namespace MyTestProject
                 new object[] { "#CD5C5K" },
                 new object[] { "#CD5C5Z" },
                 new object[] { "#CDD5XC" },
-                new object[] { "CD5CP5C" }
+                new object[] { "#ZD5CPC" }
             };
 
         [Theory]
@@ -45,6 +45,14 @@ namespace MyTestProject
             const string code = "#1b3";
 
             Assert.Throws<ArgumentOutOfRangeException>(() => HexCode.IsValidHexCode(code));
+        }
+
+        [Fact]
+        public void throw_ArgumentException()
+        {
+            const string code = "0123ABC";
+
+            Assert.Throws<ArgumentException>(() => HexCode.IsValidHexCode(code));
         }
     }
 }
