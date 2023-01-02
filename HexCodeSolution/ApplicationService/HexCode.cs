@@ -17,7 +17,7 @@
         {
             // Implementing rule 1
             if (!code[0].Equals('#'))
-                return false;
+                throw new ArgumentException(" hex code must begin with a pound key #");
 
             // Implementing rule 2
             if (code.Length != 7)
