@@ -15,10 +15,10 @@ namespace MyTestProject
         public static IEnumerable<object[]> falseDataToTest
             => new List<object[]>
             {
-                new object[] { "#CD5C58C" },
+                new object[] { "#CD5C5K" },
                 new object[] { "#CD5C5Z" },
-                new object[] { "#CD5C" },
-                new object[] { "CD5C5C" }
+                new object[] { "#CDD5XC" },
+                new object[] { "CD5CP5C" }
             };
 
         [Theory]
@@ -37,6 +37,14 @@ namespace MyTestProject
             bool result = HexCode.IsValidHexCode(code);
 
             Assert.False(result);
+        }
+
+        [Fact]
+        public void throw_ArgumentOutOfRangeException()
+        {
+            const string code = "#1b3";
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => HexCode.IsValidHexCode(code));
         }
     }
 }

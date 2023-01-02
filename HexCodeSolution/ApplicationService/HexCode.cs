@@ -21,7 +21,7 @@
 
             // Implementing rule 2
             if (code.Length != 7)
-                return false;
+                throw new ArgumentOutOfRangeException("It must has exactly 7 characters in length");
 
             char[] validCharacters = new char[] { '#', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
 
